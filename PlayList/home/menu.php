@@ -1,6 +1,3 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" >
 <html  xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,10 +15,7 @@ $(function() {
 </head>
 <body>
 <form action="" method="post">
-<div id="header">
-	logo
-</div>
-<!--div id="divMenu">
+<div id="divMenu">
 <ul id="menu">
 	<li><a href="#">Notificacion</a></li>
 	<li>
@@ -37,7 +31,7 @@ $(function() {
   <li><a href="#">Ranking</a></li>
   <li><a href="#">Amigos</a></li>
 </ul>
-</div-->
+</div>
 </form>
 </body>
 </html>

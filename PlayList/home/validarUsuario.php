@@ -23,7 +23,7 @@
 	{
 		while($resultado = mysql_fetch_array($query))
 		{
-			header("location:headerMenu.php");
+			header("location:crearPlayList.php");
 			/*echo $resultado['apellido']."</br>";
 			echo $resultado['nombre']."</br>";
 			echo $resultado['pass']."</br>";*/

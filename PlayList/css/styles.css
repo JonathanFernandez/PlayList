@@ -8,18 +8,19 @@ div#divLog{
 div#header{
 	height:100px;
 	width:100%;
-	background:orange;
+	background-color:orange;
 	border-style: solid; 
 	border-color: purple;
 }
 div#divMenu{
 	height:100%;
-	width:15%;
+	font-size: 14px;
+	
 	background:orange;
 	border-style: solid; 
 	border-color: purple;
 }
-.ui-menu { width: 97%; }
+.ui-menu { width: 70%; }
 div#divCrearPlayList
 {
 	float:left;
