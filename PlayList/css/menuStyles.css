@@ -461,6 +461,7 @@ button.ui-button::-moz-focus-inner {
 .ui-menu .ui-menu {
 	margin-top: -3px;
 	position: absolute;
+	width: 20%;
 }
 .ui-menu .ui-menu-item {
 	margin: 0;
