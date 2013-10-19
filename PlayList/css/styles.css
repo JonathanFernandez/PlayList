@@ -1,0 +1,30 @@
+div#divLog{
+	height:100px;
+	width:25%;
+	background:orange;
+	border-style: solid; 
+	border-color: purple;
+}
+div#header{
+	height:100px;
+	width:100%;
+	background:orange;
+	border-style: solid; 
+	border-color: purple;
+}
+div#divMenu{
+	height:100%;
+	width:15%;
+	background:orange;
+	border-style: solid; 
+	border-color: purple;
+}
+.ui-menu { width: 97%; }
+div#divCrearPlayList
+{
+	float:left;
+	width:70%;
+	background:orange;
+	border-style: solid; 
+	border-color: purple;
+}
