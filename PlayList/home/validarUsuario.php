@@ -23,10 +23,8 @@
 	{
 		while($resultado = mysql_fetch_array($query))
 		{
-			header("location:crearPlayList.php");
-			/*echo $resultado['apellido']."</br>";
-			echo $resultado['nombre']."</br>";
-			echo $resultado['pass']."</br>";*/
+			$_SESSION['cod_usuario'] = $resultado['code'];
+			header("location:listadoPlayList.php?privacidad=2");
 		}
 	}
 	else

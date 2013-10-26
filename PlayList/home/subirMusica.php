@@ -29,7 +29,7 @@ if ($_POST["action"] == "upload") {
     if ($archivo != "") {
         // guardamos el archivo a la carpeta files
         $destino =  "../files/".$prefijo."_".$archivo;
-        if (copy($_FILES['archivo']['tmp_name'],$destino)) {
+		if (copy($_FILES['archivo']['tmp_name'],$destino)) {
             $status = "Archivo subido: <b>".$archivo."</b>";
         } else {
             $status = "Error al subir el archivo";
@@ -38,11 +38,25 @@ if ($_POST["action"] == "upload") {
         $status = "Error al subir archivo";
     }
 	$trozos = explode(".", $archivo); 
-$extension = end($trozos); 
-// mostramos la extensión del archivo
-echo "La extensión del archivo es: $extension";  
+	$extension = end($trozos); 
+	
+	
+	if($extension != 'mp3' && $extension != 'MP3')
+	{
+		$_SESSION['finish'] = 1;
+		header("location:crearMusica.php");
+	}
 }
-
+	
+	$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
+	mysql_select_db("playlist",$conn) or die;
+	$sql_query = "insert into musica(nombre, cod_genero,artista, path, album)
+					  values('".$_POST['nombre']."','".$_POST['genero']."','".$_POST['artista']."','".$destino."','".$_POST['album']."')";
+	
+	$query = mysql_query($sql_query,$conn);
+	mysql_close($conn);
+	$_SESSION['finish'] = 2;
+	header("location:crearMusica.php");
 ?>
 </form>
 </body>

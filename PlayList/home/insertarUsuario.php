@@ -21,7 +21,7 @@
 	{
 		$_SESSION['finish'] = true;
 		mysql_close($conn);
-		header("location:registrarUsuariio.php");
+		header("location:registrarUsuario.php");
 		
 	}
 	else

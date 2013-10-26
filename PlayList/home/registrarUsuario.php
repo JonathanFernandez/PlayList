@@ -14,40 +14,56 @@ function validarRegistro()
 	var msg ="";
 	var nom = document.getElementById("nombre");
 	if(nom.value.length < 3 && nom.value.length < 25)
-		{
+	{
 			msg = msg + "el nombre debe contener entre 3 y 25  caracteres \n";
 			document.getElementById("imgNombre").style.display = "block";
-		}
+	}
+	else
+		document.getElementById("imgNombre").style.display = "none";
+	
 	var ape = document.getElementById("apellido");
 	if(ape.value.length < 3 && ape.value.length < 25)
 	{
 		msg = msg + "el apellido debe contener entre 3 y 25  caracteres \n";
 		document.getElementById("imgApellido").style.display = "block";
 	}
+	else
+		document.getElementById("imgApellido").style.display = "none";
+		
 	var email = document.getElementById("eMail");
 	if (!validarEmail(email.value) && email.value.length < 40)
 	{
 		msg = msg + "e-mail erroneo \n";
 		document.getElementById("imgEmail").style.display = "block";
 	}
+	else
+		document.getElementById("imgEmail").style.display = "none";
+		
 	var pass = document.getElementById("pass");
 	if(pass.value.length < 1 && pass.value.length < 25)
 	{
 		msg = msg + "la password debe contener entre 1 y 25  caracteres \n";
 		document.getElementById("imgPass").style.display = "block";
 	}
+	else
+		document.getElementById("imgPass").style.display = "none";
+		
 	var rePass = document.getElementById("rePass");
 	if(rePass.value.length < 1 && pass.value == rePass.value)
 	{
 		msg = msg + "ambas password deben ser iguales \n";
 		document.getElementById("imgRePass").style.display = "block";
 	}
+	else
+		document.getElementById("imgRePass").style.display = "none";
 	var alias = document.getElementById("alias");
 	if(alias.value.length < 1 && alias.value.length < 25)
 	{
 		msg = msg + "el alias debe contener 1 y 25  caracteres  \n";
 		document.getElementById("imgAlias").style.display = "block";
 	}
+	else
+		document.getElementById("imgRePass").style.display = "none";
 
 	if(msg.length > 0)
 	{
@@ -117,7 +133,7 @@ function validarEmail(email)
 				echo "Ya existe un usuario con ese mail";
 				$_SESSION['finish'] = false;
 			}
-?>
+	?>
 </div>
 </form>
 </body>
