@@ -29,3 +29,9 @@ div#divCrearPlayList
 	border-style: solid; 
 	border-color: purple;
 }
+
+div#contenedor{
+	float:left;
+	width:40%;
+	height:100%;
+}
