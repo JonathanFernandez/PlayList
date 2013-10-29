@@ -1,37 +1,47 @@
-div#divLog{
+.Log{
 	height:100px;
 	width:25%;
-	background:orange;
+	background:black;
 	border-style: solid; 
-	border-color: purple;
+	border-color: ade8d2;
 }
-div#header{
+.Header{
 	height:100px;
 	width:100%;
-	background-color:orange;
+	background-color:black;
 	border-style: solid; 
-	border-color: purple;
+	border-color: ade8d2;
 }
-div#divMenu{
+.Menu{
 	height:100%;
 	font-size: 14px;
-	
-	background:orange;
+	color: white;
+	background:black;
 	border-style: solid; 
-	border-color: purple;
+	border-color: ade8d2;
 }
-.ui-menu { width: 70%; }
-div#divCrearPlayList
+.ui-menu 
+{
+	width: 70%; 
+}
+
+.CrearPlayList
 {
 	float:left;
 	width:70%;
-	background:orange;
+	background:black;
+	color: white;
 	border-style: solid; 
-	border-color: purple;
+	border-color: ade8d2;
 }
 
-div#contenedor{
+.Contenedor{
 	float:left;
+	color: white;
 	width:40%;
 	height:100%;
 }
+
+body {
+	background: url(../images/fondo2.png);
+	}

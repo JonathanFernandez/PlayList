@@ -37,8 +37,8 @@ $(function() {
 			<?php include ('menu.php'); ?>
 		</td>
 		<td>
-			<div id="divCrearPlayList">
-				<div class="contenedor" id="contenedor1">
+			<div class="CrearPlayList">
+				<div class="Contenedor" id="contenedor1">
 					<div class="tags" id="tag1">
 						Nombre: 
 					</div>
@@ -47,7 +47,7 @@ $(function() {
 					</div>
 				</div>
 				
-				<div class="contenedor" id="contenedor2">
+				<div class="Contenedor" id="contenedor2">
 					<div class="tags" id="tag2">
 						Categor&iacute;a: 
 					</div>
@@ -56,7 +56,7 @@ $(function() {
 					</div>
 				</div>
 				
-				<div class="contenedor" id="contenedor3">
+				<div class="Contenedor" id="contenedor3">
 					<div class="tags" id="tag3">
 						Privacidad: 
 					</div>

@@ -1,5 +1,5 @@
 
-<div id="divMenu">
+<div id="divMenu" class="Menu">
 <ul id="menu">
 	<li><a href="#">Notificacion</a></li>
 	<li>
