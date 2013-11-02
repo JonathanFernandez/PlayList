@@ -35,7 +35,7 @@ $(function() {
 	var album = document.getElementById("album");
 	if(album.value.length < 1 && album.value.length < 45)
 	{
-		msg = msg + "la	 album debe contener entre 1 y 45  caracteres \n";
+		msg = msg + "la album debe contener entre 1 y 45  caracteres \n";
 		document.getElementById("imgAlbum").style.display = "block";
 	}
 	else

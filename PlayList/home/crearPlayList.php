@@ -61,7 +61,7 @@
 			<?php include ('menu.php'); ?>
 		</td>
 		<td>
-			<div id="divCrearPlayList">
+			<div id="divCrearPlayList" class="CrearPLayList">
 				<div class="Contenedor" id="contenedor1">
 					<div class="tags" id="tag1">
 						Nombre: 

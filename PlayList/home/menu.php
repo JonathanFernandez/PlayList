@@ -6,6 +6,7 @@
 		<a href="#">Play List</a>
     <ul>
       <li><a href="crearPlayList.php">Crear</a></li>
+	  <li><a href="asignarMusica.php">Asignar Musica</a></li>
       <li><a href="listadoPlayList.php?privacidad=2">Mis Play List</a></li>
       <li><a href="listadoPlayList.php?privacidad=1">Play List Publicas</a></li>
 	  <li><a href="listadoPlayList.php?privacidad=3">Play List de Amigos</a></li>
