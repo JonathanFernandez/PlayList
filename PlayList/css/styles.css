@@ -1,0 +1,47 @@
+.Log{
+	height:100px;
+	width:25%;
+	background:black;
+	border-style: solid; 
+	border-color: ade8d2;
+}
+.Header{
+	height:100px;
+	width:100%;
+	background-color:black;
+	border-style: solid; 
+	border-color: ade8d2;
+}
+.Menu{
+	height:100%;
+	font-size: 14px;
+	color: white;
+	background:black;
+	border-style: solid; 
+	border-color: ade8d2;
+}
+.ui-menu 
+{
+	width: 70%; 
+}
+
+.CrearPlayList
+{
+	float:left;
+	width:70%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: ade8d2;
+}
+
+.Contenedor{
+	float:left;
+	color: white;
+	width:40%;
+	height:100%;
+}
+
+body {
+	background: url(../images/fondo2.png);
+	}
