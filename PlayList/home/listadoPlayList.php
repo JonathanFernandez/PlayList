@@ -48,7 +48,7 @@ $(function() {
 								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario']." and cod_privacidad = ".$_REQUEST['privacidad']."";
 							break;
 							case 2:
-								$sql_query ="select * from playList where cod_privacidad = ".$_REQUEST['privacidad']."";
+								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario'];
 							break;
 							case 3:
 								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario']." and cod_privacidad = ".$_REQUEST['privacidad']."";
@@ -62,18 +62,19 @@ $(function() {
 						{
 							
 							while($resultado = mysql_fetch_array($query))
-							{ 
+							{ 	
+								$archivo = fopen($resultado['nombre'].".xspf","a");
+								
 								echo "<h3>".$resultado['nombre']." 
 								<object type='application/x-shockwave-flash' width='400' height='15'
-										data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/playlist.xspf'>
-										<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/playlist.xspf'/>
+										data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
+										<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
 								</object>'<h3>";
-								
-								
+							
 								echo "<div>\n";
 								echo "<p>\n";
 								echo "	<ul>\n";
-								$sql_query2 ="select m.nombre, mp.cod_playlist, p.code
+								$sql_query2 ="select m.nombre, mp.cod_playlist, p.code, m.path
 											 from musica m 
 											 inner join musicaplaylist mp on
 												mp.cod_musica = m.code 
@@ -81,7 +82,13 @@ $(function() {
 												mp.cod_playlist = p.code
 											 where p.code = ".$resultado['code']."
 											";
-								
+								fputs($archivo,"<?xml version='1.0' encoding='UTF-8' ?>");
+								fputs($archivo,"\n");
+								fputs($archivo,"<playlist version='1' xmlns='http://xspf.org/ns/0/'>");
+								fputs($archivo,"\n");
+								fputs($archivo,"<trackList>");
+								fputs($archivo,"\n\t");
+										
 								$query2 = mysql_query($sql_query2,$conn);
 								$filas2 = mysql_num_rows($query2);
 								if($filas2>=1)
@@ -89,12 +96,20 @@ $(function() {
 									while($resultado2 = mysql_fetch_array($query2))
 									{ 
 										echo "<li>".$resultado2['nombre']."</li>\n";
+										fputs($archivo,"<track><title>".$resultado2['nombre']."</title><location>".$resultado2['path']."</location></track>");
+										fputs($archivo,"\n");
 									}
 								}	
+								fputs($archivo,"\t");
+								fputs($archivo,"</trackList>");
+								fputs($archivo,"\n");
+								fputs($archivo,"</playlist>");
 								
 								echo "	</ul>\n";
 								echo "</p>\n";
 							    echo "</div>\n";
+								
+								fclose($archivo);
 							}
 							
 						}

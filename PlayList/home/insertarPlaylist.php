@@ -16,7 +16,7 @@
 	
 	$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
 	mysql_select_db("playlist",$conn) or die;
-	$sql_query ="select * from playlist where nombre = '" .$_POST['nomPlaylist']."'";
+	$sql_query ="select * from playlist where nombre = '" .$_POST['nomPlaylist']."and cod_usuario =".$_SESSION['cod_usuario'];
 	$query = mysql_query($sql_query,$conn);
 	$filas = mysql_num_rows($query);
 	if($filas>=1)
@@ -30,6 +30,11 @@
 	{	
 		$sql_query = "insert into playlist(nombre,categoria,cod_privacidad,cod_usuario,fechaCreacion,fechaModificacion)
 					  values('".$_POST['nomPlaylist']."','".$_POST['categoria']."',".$_POST['privacidad'].",".$_SESSION['cod_usuario'] .","."now(),"."now())";
+		
+		$query = mysql_query($sql_query,$conn);
+		
+		$sql_query = "insert into notificaciones(cod_usuario, cod_tipo, cod_playlist,fecha)
+					  values(".$_SESSION['cod_usuario'].",2,(select ifnull(p.code,0) from playlist p where p.nombre ='".$_POST['nomPlaylist']."' and p.cod_usuario =".$_SESSION['cod_usuario']."),now())";
 		
 		$query = mysql_query($sql_query,$conn);
 		mysql_close($conn);

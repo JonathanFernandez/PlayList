@@ -30,7 +30,7 @@
 					  values('".$_POST['nombre']."','".$_POST['apellido']."','".$_POST['eMail']."','".md5($_POST['pass'])."','".$_POST['alias']."',2,now())";
 		$query = mysql_query($sql_query,$conn);
 		mysql_close($conn);
-		header("location:headerMenu.php");
+		header("location:crearPlayList.php");
 		
 	}
          
