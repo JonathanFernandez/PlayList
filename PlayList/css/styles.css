@@ -1,9 +1,18 @@
 .Log{
-	height:100px;
-	width:25%;
-	background:black;
+	height:100%;
+	width:100%;
+	background: url(../images/logo-circular.png);
 	border-style: solid; 
 	border-color: ade8d2;
+}
+.Log1 {
+	height:75%;
+	width:50%;	
+	float: left;
+}
+.Log2 {
+	height:75%;
+	width:50%;	
 }
 .Header{
 	height:100px;

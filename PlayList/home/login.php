@@ -21,21 +21,17 @@ function registrarse()
 	}*/
 	session_start();
 ?>
-<div id="divLog">
-	<table>
-	<tr>
-	<td>E-Mail: </td>
-	<td><input type="text" name="eMail" id="eMail"/></td>
-	</tr>
-	<tr>
-	<td>PassWord: </td>
-	<td><input type="password" name="pass" id="pass"/></td>
-	</tr>
-	<tr>
-	<td><input type="submit" value="Aceptar"/></td>
-	<td><input type="button" value="Registrarse" onclick="javascript:registrarse();"/></td>
-	</tr>
-	</table>
+<div id="divLog" class="Log">
+	<div class="Log1">
+		E-Mail: </br>
+		Password: </br>
+	</div>
+	<div class="Log2">
+		<input type="text" name="eMail" id="eMail"/></br>
+		<input type="password" name="pass" id="pass"/></br>
+	</div>
+	<input type="submit" value="Aceptar"/>
+	<input type="button" value="Registrarse" onclick="javascript:registrarse();"/>
 </div>
 <?php
 	if(isset($_SESSION['finish']))
