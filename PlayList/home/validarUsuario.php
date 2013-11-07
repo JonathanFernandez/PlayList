@@ -24,6 +24,10 @@
 		while($resultado = mysql_fetch_array($query))
 		{
 			$_SESSION['cod_usuario'] = $resultado['code'];
+			
+			$sql_query ="update usuario set log = 1 where code =".$_SESSION['cod_usuario'];
+			$query = mysql_query($sql_query,$conn);
+			
 			header("location:listadoPlayList.php?privacidad=2");
 		}
 	}

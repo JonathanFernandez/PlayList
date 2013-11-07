@@ -26,9 +26,20 @@
 	}
 	else
 	{	
-		$sql_query = "insert into usuario(nombre, apellido,email, pass, alias, cod_tipoUsuario,fua)
-					  values('".$_POST['nombre']."','".$_POST['apellido']."','".$_POST['eMail']."','".md5($_POST['pass'])."','".$_POST['alias']."',2,now())";
+		$sql_query = "insert into usuario(nombre, apellido,email, pass, alias, cod_tipoUsuario,fua,log)
+					  values('".$_POST['nombre']."','".$_POST['apellido']."','".$_POST['eMail']."','".md5($_POST['pass'])."','".$_POST['alias']."',2,now(),1)";
 		$query = mysql_query($sql_query,$conn);
+		
+		$sql_query ="select * from usuario where email = '" .$_POST['eMail']."' and pass ='".md5($_POST['pass'])."'";
+		$query = mysql_query($sql_query,$conn);
+		if($filas==1)
+		{
+			while($resultado = mysql_fetch_array($query))
+			{
+				$_SESSION['cod_usuario'] = $resultado['code'];
+			}
+		}
+		
 		mysql_close($conn);
 		header("location:crearPlayList.php");
 		

@@ -31,36 +31,17 @@
 			
 			$sql_query = "insert into musicaplaylist(cod_musica, cod_playlist)values(".$music[$i].",".$_POST['misPlayList'].")";
 			$query = mysql_query($sql_query,$conn);		
+			
+			$sql_query = "insert into notificaciones(cod_usuario, cod_tipo, cod_playlist,fecha)
+					  values(".$_SESSION['cod_usuario'].",2,(select ifnull(p.code,0) from playlist p where p.code =".$_POST['misPlayList']." and p.cod_usuario =".$_SESSION['cod_usuario']."),now())";
+		
+			$query = mysql_query($sql_query,$conn);		
 		}					
 	}
 	mysql_close($conn);
 	$_SESSION['finish'] = true;
 	header("location:asignarMusica.php");
-	//echo $_POST['check_list'];
-	/*echo $_POST['misPlayList'];
-
-	if(!empty($_POST['check_list']))
-	{	
-		$aDoor = $_POST['check_list'];		
-		$N = count($aDoor);
- 						
-		for($i=0; $i < $N; $i++)
-		{
-			echo $aDoor[$i] . " , ";
-					
-		}					
-	}*/
 	
-	/*$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
-	mysql_select_db("playlist",$conn) or die;
-	$sql_query = "insert into musica(nombre, cod_genero,artista, path, album)
-					  values('".$_POST['nombre']."','".$_POST['genero']."','".$_POST['artista']."','".$destino."','".$_POST['album']."')";
-	
-	$query = mysql_query($sql_query,$conn);
-	mysql_close($conn);
-	$_SESSION['finish'] = 2;
-	header("location:crearMusica.php");
-	*/
 ?>
 </form>
 </body>
