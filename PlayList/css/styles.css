@@ -22,24 +22,25 @@
 	border-color: ade8d2;
 }
 .menu{
+	float:left;
 	height:100%;
-	width: 25%;
+	width: 16%;
 	font-size: 14px;
 	color: white;
-	background:black;
+	background-color:black;
 	border-style: solid; 
 	border-color: ade8d2;
 }
 .ui-menu 
 {
-	width: 70%; 
+	width: 98%; 
 }
 /******************** Crear Playlist ********************/
 
 .crearPlayList
 {
 	float:left;
-	width:70%;
+	width:60%;
 	background:black;
 	color: white;
 	border-style: solid; 
