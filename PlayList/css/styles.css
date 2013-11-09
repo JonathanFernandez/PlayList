@@ -1,27 +1,27 @@
-.Log{
+.log{
 	height:100%;
 	width:100%;
 	background: url(../images/logo-circular.png);
 	border-style: solid; 
 	border-color: ade8d2;
 }
-.Log1 {
+.log1 {
 	height:75%;
 	width:50%;	
 	float: left;
 }
-.Log2 {
+.log2 {
 	height:75%;
 	width:50%;	
 }
-.Header{
+.header{
 	height:100px;
 	width:100%;
 	background-color:black;
 	border-style: solid; 
 	border-color: ade8d2;
 }
-.Menu{
+.menu{
 	height:100%;
 	width: 25%;
 	font-size: 14px;
@@ -36,7 +36,7 @@
 }
 /******************** Crear Playlist ********************/
 
-.CrearPlayList
+.crearPlayList
 {
 	float:left;
 	width:70%;
@@ -46,7 +46,7 @@
 	border-color: ade8d2;
 }
 
-.Contenedor{
+.contenedor{
 	float:left;
 	color: white;
 	width:40%;
