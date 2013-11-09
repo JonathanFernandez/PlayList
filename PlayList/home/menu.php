@@ -14,6 +14,11 @@
   </li>
   <li><a href="crearMusica.php">Subir Canciones</a></li>
   <li><a href="#">Ranking</a></li>
-  <li><a href="#">Amigos</a></li>
+  <li><a href="#">Amistad</a>
+	<ul>
+		<li><a href="buscarAmigos.php">Buscar amigos</a></li>
+		<li><a href="misAmigos.php">Mis amigos</a></li>
+	</ul>
+  </li>
 </ul>
 </div>
