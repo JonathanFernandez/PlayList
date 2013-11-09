@@ -50,17 +50,16 @@
 </head>
 <body>
 <form action="insertarPlaylist.php"method="post" onsubmit="javascript:return validarPlaylist()">
-<table border="0" style="width:100%;">
-	<tr>
-		<td colspan="2">
+
+	
+		
 			<?php include ('headerMenu.php'); ?>
-		</td>
-	</tr>
-	<tr>
-		<td style="width:20%;">
+	
+	
+		
 			<?php include ('menu.php'); ?>
-		</td>
-		<td>
+		
+		
 			<div id="divCrearPlayList" class="CrearPLayList">
 				<div class="Contenedor" id="contenedor1">
 					<div class="tags" id="tag1">
@@ -102,10 +101,7 @@
 				</div>
 			</div>
 			
-		</td>
-	</tr>
 
-</table>
 
 
 

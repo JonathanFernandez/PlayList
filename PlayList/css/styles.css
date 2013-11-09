@@ -23,6 +23,7 @@
 }
 .Menu{
 	height:100%;
+	width: 25%;
 	font-size: 14px;
 	color: white;
 	background:black;
@@ -33,6 +34,7 @@
 {
 	width: 70%; 
 }
+/******************** Crear Playlist ********************/
 
 .CrearPlayList
 {
@@ -50,6 +52,36 @@
 	width:40%;
 	height:100%;
 }
+
+.tags{
+	float:left;
+	width:30%;
+	height:100%;
+	text-align: right;
+	padding: 5%;
+}
+
+.inputs{
+	float:left;
+	width:40%;
+	height:100%;
+	text-align: left;
+	padding: 5%;
+}
+
+.cruz{
+	float:left;
+	width:10%;
+}
+
+.submit{
+	float:left;
+	clear: both;
+	width:80%;
+	text-align: 0 auto;
+	padding: 10%;
+}
+/**************************************************/
 
 body {
 	background: url(../images/fondo2.png);
