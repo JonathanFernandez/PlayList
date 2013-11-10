@@ -60,8 +60,8 @@
 			<?php include ('menu.php'); ?>
 		
 		
-			<div id="divCrearPlayList" class="CrearPLayList">
-				<div class="Contenedor" id="contenedor1">
+			<div id="divCrearPlayList" class="crearPLayList">
+				<div class="contenedor" id="contenedor1">
 					<div class="tags" id="tag1">
 						Nombre: 
 					</div>
@@ -73,7 +73,7 @@
 					</div>
 				</div>
 				
-				<div class="Contenedor" id="contenedor2">
+				<div class="contenedor" id="contenedor2">
 					<div class="tags" id="tag2">
 						Categor&iacute;a: 
 					</div>
@@ -85,7 +85,7 @@
 					</div>
 				</div>
 				
-				<div class="Contenedor" id="contenedor3">
+				<div class="contenedor" id="contenedor3">
 					<div class="tags" id="tag3">
 						Privacidad: 
 					</div>
