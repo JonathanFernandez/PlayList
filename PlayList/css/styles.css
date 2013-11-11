@@ -67,8 +67,7 @@
 }
 /******************** Crear Playlist ********************/
 
-.crearPlayList
-{
+.crearPlayList{
 	float:left;
 	width:60%;
 	background:black;
@@ -112,7 +111,18 @@
 	text-align: 0 auto;
 	padding: 10%;
 }
-/**************************************************/
+/******************** Fin De Crear Playlist ********************/
+
+/******************** Listado Playlist ********************/
+.listadoPlaylist{
+	float:left;
+	width:60%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: ade8d2;
+}
+/******************** Fin De Listado Playlist ********************/
 
 body {
 	background: url(../images/fondo2.png);
