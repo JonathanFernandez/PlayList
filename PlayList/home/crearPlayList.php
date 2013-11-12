@@ -97,7 +97,7 @@
 				</div>
 				
 				<div class="submit" id="submit">
-					<input type="submit" value="Crear"/>
+					<input type="submit" class="boton" value="Crear"/>
 				</div>
 			</div>
 			

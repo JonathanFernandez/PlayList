@@ -122,7 +122,7 @@ function validarEmail(email)
 	<td><img src="../images/cruz.png" id="imgAlias" style="display:none;"/></td>
 	</tr>
 	<tr>
-	<td><input type="submit" value="Aceptar"/></td>
+	<td><input type="submit" value="Aceptar" class="boton"/></td>
 	<td><input type="button" value="Volver" onclick="javascript:returnInicio()"/></td>
 	</tr>
 	</table>

@@ -1,79 +1,70 @@
 <!	DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" >
 <html  xmlns="http://www.w3.org/1999/xhtml">
-<head>
+	<head>
+		<title>CrearMusica</title>
+		<script type="text/javascript" src="../jQuery/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/menuStyles.css"/>
+		<script src="../jQuery/1.10.3jquery-ui.js"></script>
 
-<title>CrearMusica</title>
-<script type="text/javascript" src="../jQuery/jquery-1.9.1.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
-<link rel="stylesheet" type="text/css" href="../css/menuStyles.css"/>
-<script src="../jQuery/1.10.3jquery-ui.js"></script>
+		<script type="text/javascript">
+		$(function() {
+			$( "#menu" ).menu();
+		  });
+		  
+		 function validarMusica()
+		 {
+			var msg ="";
+			var nom = document.getElementById("nombre");
+			if(nom.value.length < 1 && nom.value.length < 45)
+			{
+					msg = msg + "el nombre debe contener entre 1 y 45  caracteres \n";
+					document.getElementById("imgNombre").style.display = "block";
+			}
+			else
+				document.getElementById("imgNombre").style.display = "none";
+			var artista = document.getElementById("artista");
+			if(artista.value.length < 1 && artista.value.length < 45)
+			{
+				msg = msg + "el artista debe contener entre 1 y 45  caracteres \n";
+				document.getElementById("imgArtista").style.display = "block";
+			}
+			else
+				document.getElementById("imgArtista").style.display = "none";
+			var album = document.getElementById("album");
+			if(album.value.length < 1 && album.value.length < 45)
+			{
+				msg = msg + "la album debe contener entre 1 y 45  caracteres \n";
+				document.getElementById("imgAlbum").style.display = "block";
+			}
+			else
+				document.getElementById("imgAlbum").style.display = "none";
+				
+			var archivo = document.getElementById("archivo");
+			if(archivo.value.length < 1 && archivo.value.length < 45)
+			{
+				msg = msg + "debe seleccionar un archivo \n";
+				document.getElementById("imgArchivo").style.display = "block";
+			}
+			else
+				document.getElementById("imgArchivo").style.display = "none";
+				
+			if(msg.length > 0)
+			{
+				alert(msg);
+				return false;
+			}
+			return true;
+		 }
+		</script>
+	</head>
+	<body>
+		<form action="subirMusica.php"method="post" enctype="multipart/form-data" onsubmit="javascript:return validarMusica()">
 
-<script type="text/javascript">
-$(function() {
-    $( "#menu" ).menu();
-  });
-  
- function validarMusica()
- {
-	var msg ="";
-	var nom = document.getElementById("nombre");
-	if(nom.value.length < 1 && nom.value.length < 45)
-	{
-			msg = msg + "el nombre debe contener entre 1 y 45  caracteres \n";
-			document.getElementById("imgNombre").style.display = "block";
-	}
-	else
-		document.getElementById("imgNombre").style.display = "none";
-	var artista = document.getElementById("artista");
-	if(artista.value.length < 1 && artista.value.length < 45)
-	{
-		msg = msg + "el artista debe contener entre 1 y 45  caracteres \n";
-		document.getElementById("imgArtista").style.display = "block";
-	}
-	else
-		document.getElementById("imgArtista").style.display = "none";
-	var album = document.getElementById("album");
-	if(album.value.length < 1 && album.value.length < 45)
-	{
-		msg = msg + "la album debe contener entre 1 y 45  caracteres \n";
-		document.getElementById("imgAlbum").style.display = "block";
-	}
-	else
-		document.getElementById("imgAlbum").style.display = "none";
-		
-	var archivo = document.getElementById("archivo");
-	if(archivo.value.length < 1 && archivo.value.length < 45)
-	{
-		msg = msg + "debe seleccionar un archivo \n";
-		document.getElementById("imgArchivo").style.display = "block";
-	}
-	else
-		document.getElementById("imgArchivo").style.display = "none";
-		
-	if(msg.length > 0)
-	{
-		alert(msg);
-		return false;
-	}
-	return true;
- }
-</script>
-
-</head>
-<body>
-<form action="subirMusica.php"method="post" enctype="multipart/form-data" onsubmit="javascript:return validarMusica()">
-<table border="0" style="width:100%;">
-	<tr>
-		<td colspan="2">
 			<?php include ('headerMenu.php'); ?>
-		</td>
-	</tr>
-	<tr>
-		<td style="width:20%;">
+		
 			<?php include ('menu.php'); ?>
-		</td>
-		<td>
-			<div id="divCrearPlayList" class="CrearPlaylist">
+			<div id="divCrearPlayList" class="crearPlaylist">
 				<table>
 					<tr>
 					<td>Nombre: </td>
@@ -119,37 +110,27 @@ $(function() {
 					<td><img src="../images/cruz.png" id="imgArchivo" style="display:none;"/></td>
 					</tr>
 					<tr>
-					<td><input name="enviar" type="submit" value="Subir Musica"/>
+					<td><input name="enviar" type="submit" class="boton" value="Subir Musica"/>
 						<input name="action" type="hidden" value="upload" />
 					</td>
 					</tr>
 				</table>
-				     
-		</td>
-	</tr>
-
-</table>
-<?php
-	if(isset($_SESSION['finish']))
-	{
-		if($_SESSION['finish'] == 1)
-		{
-			echo "<script type='text/javascript'>alert('Solo se puede subir archivos MP3');</script>";
-			$_SESSION['finish'] = 0;
-		}
-		if($_SESSION['finish'] == 2)
-		{
-			echo "<script type='text/javascript'>alert('El archivo se ha subido con exito');</script>";
-			$_SESSION['finish'] = 0;
-		}
-	}
-	?>
-
-
-
-
-</div>
-
-</form>
-</body>
+			</div>			 
+			<?php
+				if(isset($_SESSION['finish']))
+				{
+					if($_SESSION['finish'] == 1)
+					{
+						echo "<script type='text/javascript'>alert('Solo se puede subir archivos MP3');</script>";
+						$_SESSION['finish'] = 0;
+					}
+					if($_SESSION['finish'] == 2)
+					{
+						echo "<script type='text/javascript'>alert('El archivo se ha subido con exito');</script>";
+						$_SESSION['finish'] = 0;
+					}
+				}
+			?>
+		</form>
+	</body>
 </html>

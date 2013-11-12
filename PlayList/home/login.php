@@ -30,7 +30,7 @@ function registrarse()
 		<input type="text" name="eMail" id="eMail"/></br>
 		<input type="password" name="pass" id="pass"/></br>
 	</div>
-	<input type="submit" value="Aceptar"/>
+	<input type="submit" value="Aceptar" class="boton"/>
 	<input type="button" value="Registrarse" onclick="javascript:registrarse();"/>
 </div>
 <?php

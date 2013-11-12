@@ -25,7 +25,7 @@
 					echo $resultado['nombre']." ".$resultado['apellido']."-(".$resultado['alias'].")";
 				echo "</td>";
 				echo "<td>";
-					echo "<input type='submit' value='Enviar Solicitud' id='btnEnviarSolicitud".$resultado['code']."' name='btnEnviarSolicitud".$resultado['code']."' onclick =\"this.form.action = 'enviarSolicitud.php?codUsuarioAEnviar=".$resultado['code']."'\"/>";
+					echo "<input type='submit' value='Enviar Solicitud' class='boton' id='btnEnviarSolicitud".$resultado['code']."' name='btnEnviarSolicitud".$resultado['code']."' onclick =\"this.form.action = 'enviarSolicitud.php?codUsuarioAEnviar=".$resultado['code']."'\"/>";
 				echo "</td>";
 			echo "</tr>";
 								
