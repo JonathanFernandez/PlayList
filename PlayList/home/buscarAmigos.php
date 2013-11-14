@@ -30,7 +30,31 @@
 			
 			<div id="divBuscarAmigos" class="buscarAmigos">
 						
-				<?php include('listarBuscarAmigos.php'); ?>
+				<table>
+					<tr>
+						<td>
+							<input type="text" name="txtNombreAmigo" id="txtNombreAmigo"/>
+						</td>
+						<td>
+							<input type="submit" name="btnBuscarAmigo" id="btnBuscarAmigo" value="Buscar"/>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<?php 
+							if(isset($_POST['btnBuscarAmigo']))
+							{
+								$like = "and (nombre like '%".$_POST['txtNombreAmigo']."%' or apellido like '%".$_POST['txtNombreAmigo']."%' 
+										 or alias like '%".$_POST['txtNombreAmigo']."%')";								
+							}
+							else
+							{
+								$like = "";
+							}
+						include('listarBuscarAmigos.php');	
+							
+					?>
+				</table>
 						
 			</div>
 		</form>

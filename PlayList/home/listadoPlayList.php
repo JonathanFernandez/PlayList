@@ -41,7 +41,16 @@
 								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario']." and cod_privacidad = ".$_REQUEST['privacidad']."";
 							break;
 							case 2:
-								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario'];
+								$sql_query ="select 
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+											from 
+												playlist pl
+											left join rankingplaylist rpl on
+												rpl.cod_playlist = pl.code
+											left join usuario u on
+												u.code = rpl.cod_usuario
+
+											where pl.cod_usuario = ".$_SESSION['cod_usuario'];
 							break;
 							case 3:
 								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario']." and cod_privacidad = ".$_REQUEST['privacidad']."";
@@ -62,7 +71,13 @@
 								<object type='application/x-shockwave-flash' width='400' height='15'
 										data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
 										<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
-								</object>'<h3>";
+								</object>";
+								if($resultado['meGusta'] == 0)
+									echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick =\"this.form.action = 'insertarMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
+								if($resultado['meNoGusta'] == 0)
+									echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No me gusta' onclick =\"this.form.action = 'insertarNoMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
+								
+								echo"<h3>";
 							
 								echo "<div>\n";
 								echo "<p>\n";
@@ -100,7 +115,7 @@
 								
 								echo "	</ul>\n";
 								echo "</p>\n";
-								echo "</div>\n";
+							    echo "</div>\n";
 								
 								fclose($archivo);
 							}
