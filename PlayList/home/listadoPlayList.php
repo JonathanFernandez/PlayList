@@ -18,12 +18,21 @@
 	$(function() {
 		$( "#accordion" ).accordion();
 	  });
-
+	function insertMegusta(cod_playlist, privacidad)
+	{
+		var page = 'insertarMegusta.php?codPlaylist='+cod_playlist+'&privacidad='+privacidad ;
+		location.href=page;
+	}
+	function insertNoMegusta(cod_playlist, privacidad)
+	{
+		var page = 'insertarNoMegusta.php?codPlaylist='+cod_playlist+'&privacidad='+privacidad ;
+		location.href=page;
+	}
 	</script>
 
 	</head>
 	<body>
-		<form action=".php"method="post" enctype="" onsubmit="javascript:return ">
+		<form action=""method="post" enctype="" onsubmit="">
 		
 			<?php include ('headerMenu.php'); ?>
 				
@@ -72,10 +81,12 @@
 										data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
 										<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
 								</object>";
-								if($resultado['meGusta'] == 0)
-									echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick =\"this.form.action = 'insertarMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
+								if($resultado['meGusta'] == 0)												
+									echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick ='javascript:insertMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
+								  //echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick =\"this.form.action = 'insertarMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
 								if($resultado['meNoGusta'] == 0)
-									echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No me gusta' onclick =\"this.form.action = 'insertarNoMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
+									echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No Me gusta' onclick ='javascript:insertNoMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
+								  //echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No me gusta' onclick =\"this.form.action = 'insertarNoMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
 								
 								echo"<h3>";
 							

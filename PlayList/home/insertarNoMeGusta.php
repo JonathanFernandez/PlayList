@@ -4,18 +4,20 @@
 	mysql_select_db("playlist",$conn) or die;
 					
 	$sql_query = "select * from rankingplaylist where cod_usuario = ".$_SESSION['cod_usuario']." and cod_playlist = ".$_REQUEST['codPlaylist']; 
-	echo $sql_query;
+	
 	$query = mysql_query($sql_query,$conn);
 	
 	$filas = mysql_num_rows($query);
+	
 	if($filas == 0)
 	{
-		$sql_query = "insert into rankingplaylist(cod_usuario, cod_playlist,meGusta,noMeGusta)	values(".$_SESSION['cod_usuario'].",".$_REQUEST['codPlaylist'].",1,0)";
+		$sql_query = "insert into rankingplaylist(cod_usuario, cod_playlist,meGusta,noMeGusta)	values(".$_SESSION['cod_usuario'].",".$_REQUEST['codPlaylist'].",0,1)";
 	
 	}
 	else
 	{
-		$sql_query = "update rankingplaylist set noMegusta = 0 , meGusta = 1 where cod_usuario = ".$_SESSION['cod_usuario']." and cod_playlist = ".$_REQUEST['codPlaylist']; 
+		$sql_query = "update rankingplaylist set noMegusta = 1 , meGusta = 0 where cod_usuario = ".$_SESSION['cod_usuario']." and cod_playlist = ".$_REQUEST['codPlaylist']; 
+		
 	}
 	
 	$query = mysql_query($sql_query,$conn);
