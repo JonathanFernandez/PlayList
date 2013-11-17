@@ -1,20 +1,29 @@
 /******************** Logueo ********************/
 
 .log{
-	height:100%;
-	width:100%;
-	background: url(../images/logo-circular.png);
+	width:50%;
+	height: 100%;
+	background-image: url(../images/logo-circular.png);
 	border-style: solid; 
 	border-color: ade8d2;
+	background-size: contain;
+	margin: auto;
+	text-align: center;
 }
 .log1 {
 	height:75%;
 	width:50%;	
 	float: left;
+	font-family: Old English Text MT; 
+	font-size: 18px; 
+	font-weight: bold; 
+	color: #ade8d2;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #000000;
 }
 .log2 {
 	height:75%;
 	width:50%;	
+	float: left;
 }
 /******************** Fin de Logueo ********************/
 
@@ -137,5 +146,5 @@
 
 body {
 	background: url(../images/fondo2.png);
-	background-attachment: fixed;
+	background-size: cover;
 }
