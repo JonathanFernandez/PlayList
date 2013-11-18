@@ -64,16 +64,18 @@
 			<?php include ('headerMenu.php'); ?>
 		
 			<?php include ('menu.php'); ?>
-			<div id="divCrearPlayList" class="crearPlaylist">
-				<table>
-					<tr>
-					<td>Nombre: </td>
-					<td><input type="text" name="nombre" id="nombre"/></td>
-					<td><img src="../images/cruz.png"/ id="imgNombre" style="display:none;"></td>
-					</tr>
-					<tr>
-					<td>Genero: </td>
-					<td><select id="genero" name="genero">
+			
+			<div class="crear">
+				<fieldset>
+					<legend>Crear Musica</legend>
+					<div class="contenido">
+						<label for="nombre">Nombre:</label>
+						<input type="text" name="nombre" id="nombre" class="input"/>
+						<img src="../images/cruz.png"/ id="imgNombre" style="display:none;" class="img"/>
+					</div>
+					<div class="contenido">
+						<label for="genero">Genero:</label>
+						<select id="genero" name="genero" class="input">
 							<option value="18">Otros</option>
 							<option value="1">Rock</option>
 							<option value="2">Pop</option>
@@ -92,29 +94,29 @@
 							<option value="15">Disco</option>
 							<option value="16">Tango</option>
 							<option value="17">Cumbia</option>
-						</select>
-					<td><img src="../images/cruz.png"/ id="imgGenero" style="display:none;"></td>
-					</tr>
-					<tr>
-					<td>Artista: </td>
-					<td><input type="text" name="artista" id="artista"/></td>
-					<td><img src="../images/cruz.png" id="imgArtista" style="display:none;"/></td>
-					</tr>
-					<tr>
-					<td>Album: </td>
-					<td><input type="text" name="album" id="album" /></td>
-					<td><img src="../images/cruz.png" id="imgAlbum" style="display:none;"/></td>
-					</tr>
-					<td>Archivo: </td>
-					<td><input name="archivo" type="file" size="35" id="archivo"/></td>
-					<td><img src="../images/cruz.png" id="imgArchivo" style="display:none;"/></td>
-					</tr>
-					<tr>
-					<td><input name="enviar" type="submit" class="boton" value="Subir Musica"/>
-						<input name="action" type="hidden" value="upload" />
-					</td>
-					</tr>
-				</table>
+						</select></br>
+						<img src="../images/cruz.png"/ id="imgGenero" style="display:none;" class="img"/>
+					</div>
+					<div class="contenido">
+						<label for="artista">Artista:</label>
+						<input type="text" name="artista" id="artista" class="input"/>
+						<img src="../images/cruz.png"/ id="imgArtista" style="display:none;" class="img"/>
+					</div>
+					<div class="contenido">
+						<label for="album">Album:</label>
+						<input type="text" name="album" id="album" class="input"/>
+						<img src="../images/cruz.png"/ id="imgAlbum" style="display:none;" class="img"/>
+					</div>
+					<div class="contenido">
+						<label for="archivo">Archivo:</label>
+						<input name="archivo" type="file" size="35" id="archivo" class="input"/>
+						<img src="../images/cruz.png"/ id="imgArchivo" style="display:none;" class="img"/>
+					</div>
+					<div class="submit">
+						<input name="enviar" type="submit" class="boton" value="Subir Musica"/>
+						<input name="action" type="hidden" class="boton" value="upload" />
+					</div>
+				</fieldset>
 			</div>			 
 			<?php
 				if(isset($_SESSION['finish']))

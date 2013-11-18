@@ -88,50 +88,53 @@
 	border-color: ade8d2;	
 }
 
-/******************** Crear Playlist ********************/
+/******************** Crear Playlist y Musica ********************/
 
-.crearPlayList{
+.crear{
 	float:left;
 	width:60%;
 	background:black;
 	color: white;
 	border-style: solid; 
 	border-color: ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	line-height: 200%;
 }
 
-.contenedor{
-	float:left;
-	color: white;
-	width:60%;
-	height:100%;
+.contenido{
+	float: left;
+	width: 100%;
+	height:auto;
 }
 
-.tags{
-	float:left;
-	width:45%;
-	text-align: left;
-}
-
-.inputs{
+.contenido label{
 	float:left;
 	width:45%;
 	text-align: left;
 }
 
-.cruz{
+.contenido .input{
+	float:left;
+	width:45%;
+	text-align: left;	
+}
+
+.contenido .img{
 	text-align: center;
 	float:left;
-	width:10%;
+	margin-left: 10px;
 }
 
 .submit{
 	float:left;
 	clear: both;
-	width:80%;
 	text-align: 0 auto;
-	padding: 10%;
+	padding: 5%;
 }
-/******************** Fin De Crear Playlist ********************/
+/******************** Fin De Crear Playlist y Musica ********************/
+
 
 /******************** Listado Playlist ********************/
 .listadoPlaylist{
