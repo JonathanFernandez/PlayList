@@ -26,6 +26,26 @@
 	float: left;
 }
 /******************** Fin de Logueo ********************/
+/******************** Registro ********************/
+
+.registro{
+	margin: auto;
+	text-align: center;
+	width:50%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	line-height: 200%;
+}
+.imgRegistro{
+	width:100%
+}
+
+/******************** Fin Registro ********************/
 
 /******************** Encabezado ********************/
 
@@ -130,8 +150,9 @@
 .submit{
 	float:left;
 	clear: both;
-	text-align: 0 auto;
+	text-align: center;
 	padding: 5%;
+	margin: auto;
 }
 /******************** Fin De Crear Playlist y Musica ********************/
 
