@@ -47,7 +47,15 @@
 						switch($_REQUEST['privacidad'])
 						{
 							case 1:
-								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario']." and cod_privacidad = ".$_REQUEST['privacidad']."";
+								$sql_query ="select
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+											from 
+												playlist pl
+											left join rankingplaylist rpl on
+												rpl.cod_playlist = pl.code
+											
+
+											where pl.cod_privacidad = 1";
 							break;
 							case 2:
 								$sql_query ="select 
