@@ -70,7 +70,19 @@
 											where pl.cod_usuario = ".$_SESSION['cod_usuario'];
 							break;
 							case 3:
-								$sql_query ="select * from playList where cod_usuario = ".$_SESSION['cod_usuario']." and cod_privacidad = ".$_REQUEST['privacidad']."";
+								$sql_query ="select 
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+											from 
+												playlist pl
+											left join rankingplaylist rpl on
+												rpl.cod_playlist = pl.code
+											inner join usuario u on
+												u.code = pl.cod_usuario
+											inner join seguimientousuario su on
+												su.cod_estadoseguimiento = 3 and
+												su.cod_usuario = ".$_SESSION['cod_usuario']." and
+												su.cod_usuarioaseguir = pl.cod_usuario
+											where pl.cod_privacidad = 3";
 							break;
 						}
 						

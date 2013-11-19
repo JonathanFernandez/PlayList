@@ -22,8 +22,8 @@
 	
 	$query = mysql_query($sql_query,$conn);
 	
-	$sql_query = "insert into notificaciones(cod_usuario, cod_tipo, cod_playlist,fecha)
-					  values(".$_SESSION['cod_usuario'].",3,".$_REQUEST['codPlaylist'].",now())";
+	$sql_query = "insert into notificaciones(cod_usuario, cod_tipo, cod_playlist,fecha,likes)
+					  values(".$_SESSION['cod_usuario'].",3,".$_REQUEST['codPlaylist'].",now(),0)";
 		
 	$query = mysql_query($sql_query,$conn);
 	
