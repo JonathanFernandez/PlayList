@@ -168,6 +168,44 @@
 }
 /******************** Fin De Listado Playlist ********************/
 
+/******************** Buscar Amigos y Mis Amigos ********************/
+.buscarAmigos{
+	float:left;
+	width:60%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	line-height: 200%;
+}
+.busqueda{
+	float:left;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	text-align: center;
+	width: 100%;
+}
+.listado{
+	float: left;
+	width: 100%;
+}
+.listadoNombre{
+	float: left;
+	width: 75%;
+	text-align: center;
+}
+.listadoBoton{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+/******************** Fin Buscar Amigos ********************/
+
+
+
 body {
 	background: url(../images/fondo2.png);
 	background-size: cover;

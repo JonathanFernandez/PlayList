@@ -5,21 +5,21 @@
 <html  xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 
-	<title>Mis Amigos</title>
-	<script type="text/javascript" src="../jQuery/jquery-1.9.1.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/menuStyles.css"/>
-	<script src="../jQuery/1.10.3jquery-ui.js"></script>
+		<title>Mis Amigos</title>
+		<script type="text/javascript" src="../jQuery/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/menuStyles.css"/>
+		<script src="../jQuery/1.10.3jquery-ui.js"></script>
 
-	<script type="text/javascript">
-	$(function() {
-		$( "#menu" ).menu();
-	  });
-	$(function() {
-		$( "#accordion" ).accordion();
-	  });
+		<script type="text/javascript">
+		$(function() {
+			$( "#menu" ).menu();
+		  });
+		$(function() {
+			$( "#accordion" ).accordion();
+		  });
 
-	</script>
+		</script>
 	</head>
 	<body>
 		<form action="" method="post" enctype="" onsubmit="">
@@ -28,19 +28,14 @@
 	
 			<?php include ('menu.php'); ?>
 			
-			<div id="divBuscarMisAmigos" class="buscarAmigos">
+			<div class="buscarAmigos">
 						
-				<table>
-					<tr>
-						<td>
+						<div class="busqueda">
 							<input type="text" name="txtNombreAmigo" id="txtNombreAmigo"/>
-						</td>
-						<td>
-							<input type="submit" name="btnBuscarMiAmigo" id="btnBuscarMiAmigo" value="Buscar"/>
-						</td>
-					</tr>
-				</table>
-				<table>
+						
+							<input type="submit" name="btnBuscarMiAmigo" id="btnBuscarMiAmigo" value="Buscar" class="boton"/>
+						</div>
+					
 					<?php 
 							if(isset($_POST['btnBuscarMiAmigo']))
 							{
@@ -54,7 +49,7 @@
 						include('listarMisAmigos.php');	
 							
 					?>
-				</table>
+			
 			</div>
 		</form>
 	</body>

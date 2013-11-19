@@ -29,33 +29,23 @@
 			<?php include ('menu.php'); ?>
 			
 			<div id="divBuscarAmigos" class="buscarAmigos">
-						
-				<table>
-					<tr>
-						<td>
-							<input type="text" name="txtNombreAmigo" id="txtNombreAmigo"/>
-						</td>
-						<td>
-							<input type="submit" name="btnBuscarAmigo" id="btnBuscarAmigo" value="Buscar"/>
-						</td>
-					</tr>
-				</table>
-				<table>
-					<?php 
-							if(isset($_POST['btnBuscarAmigo']))
-							{
-								$like = "and (nombre like '%".$_POST['txtNombreAmigo']."%' or apellido like '%".$_POST['txtNombreAmigo']."%' 
-										 or alias like '%".$_POST['txtNombreAmigo']."%')";								
-							}
-							else
-							{
-								$like = "";
-							}
-						include('listarBuscarAmigos.php');	
-							
-					?>
-				</table>
-						
+				<div class="busqueda">			
+					<input type="text" name="txtNombreAmigo" id="txtNombreAmigo" class="boton"/>
+				
+					<input type="submit" name="btnBuscarAmigo" id="btnBuscarAmigo" value="Buscar" class="boton"/>
+				</div>	
+				<?php 
+						if(isset($_POST['btnBuscarAmigo']))
+						{
+							$like = "and (nombre like '%".$_POST['txtNombreAmigo']."%' or apellido like '%".$_POST['txtNombreAmigo']."%' 
+									 or alias like '%".$_POST['txtNombreAmigo']."%')";								
+						}
+						else
+						{
+							$like = "";
+						}
+					include('listarBuscarAmigos.php');		
+				?>
 			</div>
 		</form>
 	</body>

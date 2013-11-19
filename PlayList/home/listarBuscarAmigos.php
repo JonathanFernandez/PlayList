@@ -19,17 +19,15 @@
 	{
 		
 		while($resultado = mysql_fetch_array($query))
-		{ 
-			echo "<tr>";
-				echo "<td>";
+		{ 	
+			echo "<div class='listado'>";
+				echo "<div class='listadoNombre'>";
 					echo $resultado['nombre']." ".$resultado['apellido']."-(".$resultado['alias'].")";
-				echo "</td>";
-				echo "<td>";
+				echo "</div>";
+				echo "<div class='listadoBoton'>";
 					echo "<input type='submit' value='Enviar Solicitud' class='boton' id='btnEnviarSolicitud".$resultado['code']."' name='btnEnviarSolicitud".$resultado['code']."' onclick =\"this.form.action = 'enviarSolicitud.php?codUsuarioAEnviar=".$resultado['code']."'\"/>";
-				echo "</td>";
-			echo "</tr>";
-								
-					
+				echo "</div>";		
+			echo "</div>";
 		}
 	}
 	mysql_close($conn); 
