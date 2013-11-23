@@ -43,7 +43,7 @@
 </script>
 </head>
 <body>
-<div style="width:500;height:300" id="map"></div>
+<div style="width:100%;height:300" id="map"></div>
 <div id="location"></div>
 </body>
 </html>

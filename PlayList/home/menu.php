@@ -21,4 +21,5 @@
 	</ul>
   </li>
 </ul>
+<?php include("googlemaps2.php");?>
 </div>
