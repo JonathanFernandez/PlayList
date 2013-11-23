@@ -11,7 +11,7 @@
 				(	select cod_usuarioAseguir 
 					from seguimientousuario 
 					where (cod_estadoSeguimiento = 1 or cod_estadoSeguimiento = 3 )and cod_usuario = ".$_SESSION['cod_usuario'].")
-				and	cod_tipousuario = 2 
+				and	cod_tipousuario = 2 " .$like."
 				order by nombre";
 		
 	$query = mysql_query($sql_query,$conn);
