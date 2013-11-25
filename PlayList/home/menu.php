@@ -1,7 +1,7 @@
 
 <div id="divMenu" class="Menu">
 <ul id="menu">
-	<li><a href="#">Notificacion</a></li>
+	<li><a href="notificaciones.php">Notificacion</a></li>
 	<li>
 		<a href="#">Play List</a>
     <ul>
