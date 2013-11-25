@@ -18,6 +18,7 @@
 	<ul>
 		<li><a href="buscarAmigos.php">Buscar amigos</a></li>
 		<li><a href="misAmigos.php">Mis amigos</a></li>
+		<li><a href="solicitudesDeAmistad.php">Solicitudes de Amistad</a></li>
 	</ul>
   </li>
 </ul>

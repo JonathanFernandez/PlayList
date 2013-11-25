@@ -8,7 +8,7 @@
   function initialize() {
     // Initialize default values
     var zoom = 3;
-    var latlng = new google.maps.LatLng(37.4419, -100.1419);
+    var latlng = new google.maps.LatLng(-34.603705, -58.381439);
     var location = "Showing default location for map.";
 
     // If ClientLocation was filled in by the loader, use that info instead
