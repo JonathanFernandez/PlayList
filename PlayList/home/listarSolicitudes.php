@@ -3,10 +3,10 @@
 	$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
 	mysql_select_db("playlist",$conn) or die;
 						
-	$sql_query = "	select 
+	$sql_query = "	select distinct
 						n.cod_usuario as cod_usuarioQueMeSigue,
 						su.cod_estadoSeguimiento, 
-						n.fecha,
+						-- n.fecha,
 						concat('El usuario ', u.alias, ' te ha agregado como amigo '
 								) as mensaje
 					from 
@@ -32,7 +32,7 @@
 		while($resultado = mysql_fetch_array($query))
 		{ 
 			echo "<tr>";
-				echo "<td width='60%'>";
+				echo "<td width='70%'>";
 					echo $resultado['mensaje'];
 				echo "</td>";
 				echo "<td>";
@@ -41,9 +41,9 @@
 				echo "<td>";
 					echo "<input type='button' class='boton' name='btnRechazar_".$resultado['cod_usuarioQueMeSigue']."' value='Rechazar' onclick ='javascript:RechazarSolicitud(".$resultado['cod_usuarioQueMeSigue'].");'/>";
 				echo "</td>";
-				echo "<td>";
+				/*echo "<td>";
 					echo $resultado['fecha'];
-				echo "</td>";
+				echo "</td>";*/
 			echo "</tr>";		
 		}
 		echo "</table>";
