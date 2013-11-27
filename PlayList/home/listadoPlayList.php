@@ -28,6 +28,11 @@
 		var page = 'insertarNoMegusta.php?codPlaylist='+cod_playlist+'&privacidad='+privacidad ;
 		location.href=page;
 	}
+	function descargarPlaylist(nombreArchivo, privacidad)
+	{
+		var page = 'descargarPlaylist.php?nombreArchivo='+nombreArchivo+'&privacidad='+privacidad ;
+		location.href=page;
+	}
 	</script>
 
 	</head>
@@ -103,11 +108,12 @@
 								</object>";
 								if($resultado['meGusta'] == 0)												
 									echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick ='javascript:insertMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
-								  //echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick =\"this.form.action = 'insertarMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
+								 
 								if($resultado['meNoGusta'] == 0)
 									echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No Me gusta' onclick ='javascript:insertNoMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
-								  //echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No me gusta' onclick =\"this.form.action = 'insertarNoMegusta.php?codPlaylist=".$resultado['code']."'\"/>";
-								
+								  
+								$nombreFile = "\"".$resultado['nombre'].".xspf\"";
+								echo "<input type='submit' class='boton' name='btnDescargar_".$resultado['code']."' value='Descargar' onclick ='javascript:descargarPlaylist(".$nombreFile.",".$_REQUEST['privacidad'].");'/>";
 								echo"<h3>";
 							
 								echo "<div>\n";
