@@ -32,15 +32,15 @@ function registrarse()
 				</div>
 				<input type="submit" value="Aceptar" class="boton"/>
 				<input type="button" value="Registrarse" class="boton" onclick="javascript:registrarse();"/>
-			</div>
 			<?php
 				if(isset($_SESSION['finish']))
 					if($_SESSION['finish'] == true)
 						{
-							echo "error de logueo";
+							echo "<p>Error de logueo</p>";
 							$_SESSION['finish'] = false;
 						}
 			?>
+			</div>
 		</form>
 	</body>
 </html>
