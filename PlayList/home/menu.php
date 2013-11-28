@@ -1,7 +1,7 @@
 
 <div id="divMenu" class="Menu">
 <ul id="menu">
-	<li><a href="#">Notificacion</a></li>
+	<li><a href="notificaciones.php">Notificacion</a></li>
 	<li>
 		<a href="#">Play List</a>
     <ul>
@@ -18,7 +18,9 @@
 	<ul>
 		<li><a href="buscarAmigos.php">Buscar amigos</a></li>
 		<li><a href="misAmigos.php">Mis amigos</a></li>
+		<li><a href="solicitudesDeAmistad.php">Solicitudes de Amistad</a></li>
 	</ul>
   </li>
 </ul>
+<?php include("googlemaps2.php");?>
 </div>

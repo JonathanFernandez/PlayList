@@ -4,7 +4,7 @@
 	mysql_select_db("playlist",$conn) or die;
 					
 	$sql_query = "select * from rankingplaylist where cod_usuario = ".$_SESSION['cod_usuario']." and cod_playlist = ".$_REQUEST['codPlaylist']; 
-	echo $sql_query;
+	
 	$query = mysql_query($sql_query,$conn);
 	
 	$filas = mysql_num_rows($query);

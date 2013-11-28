@@ -43,8 +43,8 @@
 				
 			<?php include ('menu.php'); ?>
 			
-			<div id="divListadoPlayList" class="listadoPlaylist">
-				<div id="accordion">
+			
+				<div id="divListadoPlayList" class="listadoPlaylist">
 				
 					<?php
 						$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
@@ -96,29 +96,33 @@
 						$filas = mysql_num_rows($query);
 						if($filas>=1)
 						{
-							
+							echo "<table border='0'>";
 							while($resultado = mysql_fetch_array($query))
 							{ 	
 								$archivo = fopen($resultado['nombre'].".xspf","a");
 								
-								echo "<h3>".$resultado['nombre']." 
-								<object type='application/x-shockwave-flash' width='400' height='15'
-										data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
-										<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
-								</object>";
+								echo "<tr><td>".$resultado['nombre']."</td>"; 
+									echo "<td><object type='application/x-shockwave-flash' width='400' height='15'
+												data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
+												<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
+												</object>";
+									echo "</td>";
+								echo "<td>";
 								if($resultado['meGusta'] == 0)												
-									echo "<input type='submit' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick ='javascript:insertMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
-								 
+									echo "<input type='button' class='boton' name='btnMegusta_".$resultado['code']."' value='Me gusta' onclick ='javascript:insertMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
+								echo "</td>"; 
+								echo "<td>";
 								if($resultado['meNoGusta'] == 0)
-									echo "<input type='submit' name='btnNoMegusta_".$resultado['code']."' value='No Me gusta' onclick ='javascript:insertNoMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
-								  
+									echo "<input type='button' class='boton' name='btnNoMegusta_".$resultado['code']."' value='No Me gusta' onclick ='javascript:insertNoMegusta(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
+								echo "</td>"; 
+								echo "<td>";
 								$nombreFile = "\"".$resultado['nombre'].".xspf\"";
-								echo "<input type='submit' class='boton' name='btnDescargar_".$resultado['code']."' value='Descargar' onclick ='javascript:descargarPlaylist(".$nombreFile.",".$_REQUEST['privacidad'].");'/>";
-								echo"<h3>";
+								echo "<input type='button' class='boton' name='btnDescargar_".$resultado['code']."' value='Descargar' onclick ='javascript:descargarPlaylist(".$nombreFile.",".$_REQUEST['privacidad'].");'/>";
+								echo "</td>"; 
 							
-								echo "<div>\n";
-								echo "<p>\n";
-								echo "	<ul>\n";
+								echo "</tr>";
+								
+								
 								$sql_query2 ="select m.nombre, mp.cod_playlist, p.code, m.path
 											 from musica m 
 											 inner join musicaplaylist mp on
@@ -138,31 +142,33 @@
 								$filas2 = mysql_num_rows($query2);
 								if($filas2>=1)
 								{
+									echo "<tr colspan='5'>";
+									echo "<td>";
 									while($resultado2 = mysql_fetch_array($query2))
-									{ 
-										echo "<li>".$resultado2['nombre']."</li>\n";
+									{ 	
+										echo $resultado2['nombre']."</br>";
 										fputs($archivo,"<track><title>".$resultado2['nombre']."</title><location>".$resultado2['path']."</location></track>");
 										fputs($archivo,"\n");
 									}
+									echo "</tr>";
+									echo "</td>";
 								}	
 								fputs($archivo,"\t");
 								fputs($archivo,"</trackList>");
 								fputs($archivo,"\n");
 								fputs($archivo,"</playlist>");
 								
-								echo "	</ul>\n";
-								echo "</p>\n";
-							    echo "</div>\n";
+								
 								
 								fclose($archivo);
 							}
-							
+							echo "</table>";
 						}
 							 
 						mysql_close($conn);
 					?>
-				</div>	
-			</div>
+				</div>
+		
 			<?php
 				if(isset($_SESSION['finish']))
 				{

@@ -10,8 +10,14 @@
 				where u.code != ".$_SESSION['cod_usuario']." and u.code not in
 				(	select cod_usuarioAseguir 
 					from seguimientousuario 
-					where (cod_estadoSeguimiento = 1 or cod_estadoSeguimiento = 3 )and cod_usuario = ".$_SESSION['cod_usuario'].")
-				and	cod_tipousuario = 2 
+					where (cod_estadoSeguimiento = 1 or cod_estadoSeguimiento = 3 )and cod_usuario = ".$_SESSION['cod_usuario']."
+				)
+				and u.code not in
+				(	select cod_usuario
+					from seguimientousuario 
+					where (cod_estadoSeguimiento = 1 or cod_estadoSeguimiento = 3 ) and cod_usuarioAseguir = ".$_SESSION['cod_usuario']."
+				)
+				and	cod_tipousuario = 2 " .$like."
 				order by nombre";
 		
 	$query = mysql_query($sql_query,$conn);
