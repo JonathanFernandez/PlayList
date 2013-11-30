@@ -26,7 +26,7 @@
 						{ 	
 							if($resultado['log'] == 1)
 							{
-								echo " <p> <img src='..\images\puntoverde.png'/>".$resultado['alias']."</p>";
+								echo " <p> <img src='..\images\puntoverde.png'/>&nbsp".$resultado['alias']."</p>";
 							}
 						}
 				}
