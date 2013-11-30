@@ -29,7 +29,7 @@
 			$sql_query ="update usuario set log = 1 where code =".$_SESSION['cod_usuario'];
 			$query = mysql_query($sql_query,$conn);
 			
-			header("location:listadoPlayList.php?privacidad=2");
+			header("location:listadoPlayList2.php?privacidad=2");
 		}
 	}
 	else

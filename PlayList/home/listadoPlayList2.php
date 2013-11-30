@@ -33,6 +33,11 @@
 		var page = 'descargarPlaylist.php?nombreArchivo='+nombreArchivo+'&privacidad='+privacidad ;
 		location.href=page;
 	}
+	function eliminarPlaylist(cod_playlist, privacidad)
+	{
+		var page = 'eliminarPlaylist.php?codPlaylist='+cod_playlist+'&privacidad='+privacidad ;
+		location.href=page;
+	}
 	</script>
 
 	</head>
@@ -119,7 +124,10 @@
 								$nombreFile = "\"".$resultado['nombre'].".xspf\"";
 								echo "<input type='button' class='boton' name='btnDescargar_".$resultado['code']."' value='Descargar' onclick ='javascript:descargarPlaylist(".$nombreFile.",".$_REQUEST['privacidad'].");'/>";
 								echo "</td>"; 
-							
+								echo "<td>";
+								if ($_REQUEST['privacidad'] == 2)
+									echo "<input type='button' class='boton' name='btnEliminar_".$resultado['code']."' value='Eliminar' onclick ='javascript:eliminarPlaylist(".$resultado['code'].",".$_REQUEST['privacidad'].");'/>";
+								echo "</td>"; 
 								echo "</tr>";
 								
 								
