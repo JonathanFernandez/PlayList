@@ -32,11 +32,14 @@
 		
 		$sql_query ="select * from usuario where email = '" .$_POST['eMail']."' and pass ='".md5($_POST['pass'])."'";
 		$query = mysql_query($sql_query,$conn);
+		$filas = mysql_num_rows($query);
 		if($filas==1)
 		{
 			while($resultado = mysql_fetch_array($query))
 			{
 				$_SESSION['cod_usuario'] = $resultado['code'];
+				$_SESSION['alias'] = $resultado['alias'];
+				
 			}
 		}
 		
