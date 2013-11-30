@@ -25,7 +25,7 @@
 		
 	$query = mysql_query($sql_query,$conn);
 	
-	header("location:listadoPlayList.php?privacidad=".$_REQUEST['privacidad']);
+	header("location:listadoPlayList2.php?privacidad=".$_REQUEST['privacidad']);
 		
 	mysql_close($conn); 
 
