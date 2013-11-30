@@ -24,6 +24,7 @@
 		while($resultado = mysql_fetch_array($query))
 		{
 			$_SESSION['cod_usuario'] = $resultado['code'];
+			$_SESSION['alias'] = $resultado['alias'];
 			
 			$sql_query ="update usuario set log = 1 where code =".$_SESSION['cod_usuario'];
 			$query = mysql_query($sql_query,$conn);
