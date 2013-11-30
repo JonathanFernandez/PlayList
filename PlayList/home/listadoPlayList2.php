@@ -58,18 +58,19 @@
 						{
 							case 1:
 								$sql_query ="select
-												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta, u.alias
 											from 
 												playlist pl
 											left join rankingplaylist rpl on
 												rpl.cod_playlist = pl.code
-											
+											left join usuario u on
+												u.code = rpl.cod_usuario
 
 											where pl.cod_privacidad = 1";
 							break;
 							case 2:
 								$sql_query ="select 
-												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta, u.alias
 											from 
 												playlist pl
 											left join rankingplaylist rpl on
@@ -81,7 +82,7 @@
 							break;
 							case 3:
 								$sql_query ="select 
-												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta, u.alias
 											from 
 												playlist pl
 											left join rankingplaylist rpl on
@@ -106,7 +107,7 @@
 							{ 	
 								$archivo = fopen($resultado['nombre'].".xspf","a");
 								
-								echo "<tr><td>".$resultado['nombre']."</td>"; 
+								echo "<tr><td>".$resultado['nombre']." (".$resultado['alias']." )</td>"; 
 									echo "<td><object type='application/x-shockwave-flash' width='400' height='15'
 												data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
 												<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
