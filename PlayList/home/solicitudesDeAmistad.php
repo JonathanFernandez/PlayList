@@ -40,6 +40,8 @@
 				
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
+			
 			<div id="divSolicitudAmistad">
 				<?php include ('listarSolicitudes.php'); ?>
 			</div>

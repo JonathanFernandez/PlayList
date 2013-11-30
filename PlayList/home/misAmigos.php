@@ -28,6 +28,8 @@
 	
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
+			
 			<div class="buscarAmigos">
 						
 						<div class="busqueda">

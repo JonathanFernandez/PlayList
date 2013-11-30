@@ -43,6 +43,8 @@
 				
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
+			
 			<div id="divListadoPlayList" class="listadoPlaylist">
 				<div id="accordion">
 				

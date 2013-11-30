@@ -29,6 +29,8 @@
 				
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
+			
 			<div id="divNotificaciones">
 				<?php include ('listarNotificaciones.php'); ?>
 			</div>

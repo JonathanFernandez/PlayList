@@ -65,6 +65,8 @@
 		
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
+			
 			<div class="crear">
 				<fieldset>
 					<legend>Crear Musica</legend>
