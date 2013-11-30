@@ -37,7 +37,7 @@
 			
 			<?php include ('conectados.php'); ?>
 			
-			<div id="divNotificaciones">
+			<div id="divNotificaciones" class="notificaciones">
 				<?php include ('listarNotificaciones.php'); ?>
 			</div>
 			
