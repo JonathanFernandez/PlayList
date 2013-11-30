@@ -59,15 +59,16 @@
 						{
 							case 1:
 								$sql_query ="select
-												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta, u.alias
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta ,rpl.cod_usuario, u.alias
 											from 
 												playlist pl
 											left join rankingplaylist rpl on
-												rpl.cod_playlist = pl.code
-											left join usuario u on
-												u.code = rpl.cod_usuario
+												rpl.cod_playlist = pl.code and
+												rpl.cod_usuario = ".$_SESSION['cod_usuario']."
+											left join usuario u on 
+												u.code = pl.cod_usuario
 
-											where pl.cod_privacidad = 1";
+											where pl.cod_privacidad = 1 and ifnull(rpl.cod_usuario,".$_SESSION['cod_usuario'].")= ".$_SESSION['cod_usuario'];
 							break;
 							case 2:
 								$sql_query ="select 
