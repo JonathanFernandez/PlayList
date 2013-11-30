@@ -25,11 +25,15 @@
 		{
 			$_SESSION['cod_usuario'] = $resultado['code'];
 			$_SESSION['alias'] = $resultado['alias'];
+			$_SESSION['cod_tipoUsuario'] = $resultado['cod_tipoUsuario'];
 			
 			$sql_query ="update usuario set log = 1 where code =".$_SESSION['cod_usuario'];
 			$query = mysql_query($sql_query,$conn);
 			
-			header("location:listadoPlayList2.php?privacidad=2");
+			if($_SESSION['cod_tipoUsuario'] == 1)
+				header("location:Reportes.php?");
+			else
+				header("location:listadoPlayList2.php?privacidad=2");
 		}
 	}
 	else

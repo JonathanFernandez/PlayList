@@ -39,12 +39,16 @@
 			{
 				$_SESSION['cod_usuario'] = $resultado['code'];
 				$_SESSION['alias'] = $resultado['alias'];
+				$_SESSION['cod_tipoUsuario'] = $resultado['cod_tipoUsuario'];
 				
 			}
 		}
 		
 		mysql_close($conn);
-		header("location:crearPlayList.php");
+		if($_SESSION['cod_tipoUsuario'] == 1)
+			header("location:Reportes.php?");
+		else
+			header("location:crearPlayList.php");
 		
 	}
          
