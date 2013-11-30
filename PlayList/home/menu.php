@@ -13,7 +13,7 @@
 			</ul>
 		  </li>
 		  <li><a href="crearMusica.php">Subir Canciones</a></li>
-		  <li><a href="#">Ranking</a></li>
+		  <li><a href="ranking.php">Ranking</a></li>
 		  <li><a href="#">Amistad</a>
 			<ul>
 				<li><a href="buscarAmigos.php">Buscar amigos</a></li>
