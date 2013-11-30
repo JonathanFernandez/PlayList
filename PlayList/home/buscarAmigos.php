@@ -28,6 +28,8 @@
 	
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
+			
 			<div id="divBuscarAmigos" class="buscarAmigos">
 				<div class="busqueda">			
 					<input type="text" name="txtNombreAmigo" id="txtNombreAmigo" class="boton"/>

@@ -37,7 +37,9 @@
 			<?php include ('headerMenu.php'); ?>
 		
 			<?php include ('menu.php'); ?>
-
+			
+			<?php include ('conectados.php'); ?>
+			
 			<div id="divAsignarMusica" class="asignarMusica">
 				<table>
 				<tr>
