@@ -7,6 +7,8 @@
 	$query = mysql_query($sql_query,$conn);
 	$sql_query = "delete from rankingplaylist where cod_playlist = ".$_REQUEST['codPlaylist'];
 	$query = mysql_query($sql_query,$conn);
+	$sql_query = "delete from musicaplaylist where cod_playlist = ".$_REQUEST['codPlaylist'];
+	$query = mysql_query($sql_query,$conn);
 	$sql_query = "delete from playlist where code = ".$_REQUEST['codPlaylist']." and cod_usuario = ".$_SESSION['cod_usuario'];
 	$query = mysql_query($sql_query,$conn);
 
