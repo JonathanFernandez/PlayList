@@ -111,7 +111,7 @@
 							echo "<table border='0'>";
 							while($resultado = mysql_fetch_array($query))
 							{ 	
-								$archivo = fopen($resultado['nombre'].".xspf","a");
+								$archivo = fopen($resultado['nombre'].".xspf","w");
 								
 								echo "<tr><td>".$resultado['nombre'];if ($_REQUEST['privacidad'] != 2)echo "(".$resultado['alias']." )";
 								echo "</td>";
