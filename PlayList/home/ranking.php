@@ -10,7 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/menuStyles.css"/>
 	<script src="../jQuery/1.10.3jquery-ui.js"></script>
-
+	<script type="text/javascript">
+			var int=self.setInterval("refresh()",180000);
+			function refresh()
+			{
+					location.reload(true);
+			}
+		</script>
 	<script type="text/javascript">
 	$(function() {
 		$( "#menu" ).menu();
@@ -48,6 +54,7 @@
 				
 			<?php include ('menu.php'); ?>
 			
+			<?php include ('conectados.php'); ?>
 			
 				<div id="divRanking" >
 				
