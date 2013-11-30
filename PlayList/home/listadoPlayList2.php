@@ -70,15 +70,13 @@
 							break;
 							case 2:
 								$sql_query ="select 
-												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta, u.alias
+												pl.* , ifnull(rpl.meGusta,0) as meGusta, ifnull(rpl.NoMegusta,0) as meNoGusta
+
 											from 
 												playlist pl
 											left join rankingplaylist rpl on
 												rpl.cod_playlist = pl.code
-											left join usuario u on
-												u.code = rpl.cod_usuario
-
-											where pl.cod_usuario = ".$_SESSION['cod_usuario'];
+											where pl.cod_usuario = ".$_SESSION['cod_usuario']." and ifnull(rpl.cod_usuario,".$_SESSION['cod_usuario'].") = ".$_SESSION['cod_usuario'];
 							break;
 							case 3:
 								$sql_query ="select 
@@ -107,7 +105,8 @@
 							{ 	
 								$archivo = fopen($resultado['nombre'].".xspf","a");
 								
-								echo "<tr><td>".$resultado['nombre']." (".$resultado['alias']." )</td>"; 
+								echo "<tr><td>".$resultado['nombre'];if ($_REQUEST['privacidad'] != 2)echo "(".$resultado['alias']." )";
+								echo "</td>";
 									echo "<td><object type='application/x-shockwave-flash' width='400' height='15'
 												data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
 												<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
