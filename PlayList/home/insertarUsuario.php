@@ -46,7 +46,7 @@
 		
 		mysql_close($conn);
 		if($_SESSION['cod_tipoUsuario'] == 1)
-			header("location:Reportes.php?");
+			header("location:eliminarUsuarioAdmin.php?");
 		else
 			header("location:crearPlayList.php");
 		
