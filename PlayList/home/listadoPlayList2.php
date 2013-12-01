@@ -56,7 +56,7 @@
 			
 			<?php include ('conectados.php'); ?>
 			
-				<div id="divListadoPlayList" class="listadoPlaylist">
+				<div id="divListadoPlayList" class="listadoPlaylist" style="overflow-y: scroll;">
 				
 					<?php
 						$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
@@ -115,7 +115,7 @@
 								
 								echo "<tr><td>".$resultado['nombre'];if ($_REQUEST['privacidad'] != 2)echo "(".$resultado['alias']." )";
 								echo "</td>";
-									echo "<td><object type='application/x-shockwave-flash' width='400' height='15'
+									echo "<td><object type='application/x-shockwave-flash' width='270' height='15'
 												data='xspf_player_slim.swf?playlist_url=http://localhost:8080/PlayList/home/".$resultado['nombre'].".xspf'>
 												<param name='movie'value='xspf_player_slim.swf?playlist_url=http://localhost:8080/Playlist/home/".$resultado['nombre'].".xspf'/>
 												</object>";
