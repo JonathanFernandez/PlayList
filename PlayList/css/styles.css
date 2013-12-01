@@ -218,6 +218,7 @@
 	font-size: 16px; 
 	font-weight: bold; 
 	text-align: left;
+	overflow: auto;
 }
 .listadoPlaylist td{
 	color: white;
@@ -237,6 +238,10 @@
 	font-weight: bold; 
 	line-height: 200%;
 	text-align: center;
+	overflow: auto;
+}
+.buscarAmigos table{
+	color: white;
 }
 .busqueda{
 	float:left;
@@ -273,6 +278,7 @@
 	font-size: 16px; 
 	font-weight: bold; 
 	text-align: center;
+	overflow: auto;
 }
 .eliminar table{
 	color: white;
@@ -358,6 +364,7 @@
 	font-size: 16px; 
 	font-weight: bold; 
 	text-align: center;
+	overflow: auto;
 }
 .asignarMusica td{
 	color: white;
