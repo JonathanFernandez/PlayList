@@ -2,8 +2,7 @@
 	<div class="menu1">
 		<ul id="menu">
 			<li><a href="eliminarUsuarioAdmin.php">Eliminar Usuario</a></li>
-			<li><a href="eliminarPlayListAdim">Eliminar Play List</a></li>
-			<li><a href="EliminarCanciones.php">Eliminar Canciones</a></li>
+			<li><a href="eliminarPlayListAdim.php">Eliminar Play List</a></li>
 			<li><a href="#">Ver Reportes</a>
 			<ul>
 				<li><a href="reporteUsuarios.php">Usuarios</a></li>
