@@ -31,7 +31,7 @@
 			$query = mysql_query($sql_query,$conn);
 			
 			if($_SESSION['cod_tipoUsuario'] == 1)
-				header("location:Reportes.php?");
+				header("location:eliminarUsuarioAdmin.php?");
 			else
 				header("location:listadoPlayList2.php?privacidad=2");
 		}
