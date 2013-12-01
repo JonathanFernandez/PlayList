@@ -37,7 +37,7 @@
 			
 			<?php include ('conectados.php'); ?>
 		
-			<div id="divEliminarUsuario" class="eliminar" style="overflow-y: scroll;">
+			<div id="divEliminarUsuario" class="eliminar" >
 				
 					<input type="text" name="txtNombrePlaylist" id="txtNombrePlaylist" class="boton"/>
 				
