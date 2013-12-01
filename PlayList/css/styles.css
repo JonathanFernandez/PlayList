@@ -236,6 +236,7 @@
 	font-size: 16px; 
 	font-weight: bold; 
 	line-height: 200%;
+	text-align: center;
 }
 .busqueda{
 	float:left;
@@ -259,6 +260,27 @@
 	text-align: center;
 }
 /******************** Fin Buscar Amigos ********************/
+
+/******************** Eliminar ********************/
+.eliminar{
+	float:left;
+	width:60%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: #ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	text-align: center;
+}
+.eliminar table{
+	color: white;
+	text-align: center;
+	align: center;
+}
+/******************** Fin Eliminar ********************/
+
 .ranking{
 	float:left;
 	width:60%;

@@ -37,7 +37,7 @@
 			
 			<?php include ('conectados.php'); ?>
 		
-			<div id="divEliminarUsuario" class="buscarAmigos">
+			<div id="divEliminarUsuario" class="eliminar">
 				
 					<input type="text" name="txtNombreUsuario" id="txtNombreUsuario" class="boton"/>
 				
@@ -56,7 +56,7 @@
 					include('listarElimiarUsuarios.php');		
 				?>
 			</div>
-			
+		
 		</form>
 	</body>
 </html>

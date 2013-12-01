@@ -1,4 +1,4 @@
- <div="divMenu" class="menu">
+<div id="divMenu" class="menu">
 	<div class="menu1">
 		<ul id="menu">
 			<li><a href="eliminarUsuarioAdmin.php">Eliminar Usuario</a></li>
