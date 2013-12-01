@@ -16,7 +16,7 @@
 	
 	if($filas>=1)
 	{
-		
+		echo"<table>";
 		while($resultado = mysql_fetch_array($query))
 		{ 
 			echo "<tr>";
@@ -27,9 +27,9 @@
 					echo "<input type='submit' value='Elimiar' class='boton' id='btnEliminarPlaylist".$resultado['code']."' name='btnEliminarPlaylist".$resultado['code']."' onclick =\"this.form.action = 'eliminarPlaylistDeAdmin.php?codPlaylistAEliminar=".$resultado['code']."'\"/>";
 				echo "</td>";
 			echo "</tr>";
-								
-					
+		
 		}
+		echo"</table>";
 	}
 	mysql_close($conn); 
 
