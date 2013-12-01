@@ -1,5 +1,5 @@
 
-<div id="menuConectados" class="menuConectados" style="overflow-y: scroll;">
+<div id="menuConectados" class="menuConectados">
 	<?php
 	
 		$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");

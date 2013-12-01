@@ -56,7 +56,7 @@
 			
 			<?php include ('conectados.php'); ?>
 			
-				<div id="divListadoPlayList" class="listadoPlaylist" style="overflow-y: scroll;">
+				<div id="divListadoPlayList" class="listadoPlaylist">
 				
 					<?php
 						$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
