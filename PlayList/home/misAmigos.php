@@ -36,7 +36,7 @@
 			
 			<?php include ('conectados.php'); ?>
 			
-			<div class="buscarAmigos">
+			<div class="buscarAmigos" style="overflow-y: scroll;">
 						
 						<div class="busqueda">
 							<input type="text" name="txtNombreAmigo" id="txtNombreAmigo"/>
