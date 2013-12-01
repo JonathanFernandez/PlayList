@@ -271,6 +271,7 @@
 .eliminar{
 	float:left;
 	width:60%;
+	height: 78%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -285,6 +286,7 @@
 	color: white;
 	text-align: center;
 	align: center;
+	overflow: auto;
 }
 /******************** Fin Eliminar ********************/
 
