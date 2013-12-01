@@ -56,7 +56,7 @@
 			
 			<?php include ('conectados.php'); ?>
 			
-				<div id="divRanking" >
+				<div id="divRanking" class="ranking">
 				
 					<?php
 						$conn = mysql_connect("127.0.0.1","root","") or die ("no se puede conectar");
@@ -80,7 +80,7 @@
 						$filas = mysql_num_rows($query);
 						if($filas>=1)
 						{
-							echo "<table border='0'>";
+							echo "<table border='1' align='center'>";
 							echo "<tr>";
 								echo "<td>Playlist";
 								echo "</td>"; 

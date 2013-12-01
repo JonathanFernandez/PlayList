@@ -48,7 +48,7 @@
 			
 			<?php include ('conectados.php'); ?>
 			
-			<div id="divSolicitudAmistad">
+			<div id="divSolicitudAmistad" class="solicitudes">
 				<?php include ('listarSolicitudes.php'); ?>
 			</div>
 			

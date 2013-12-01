@@ -126,15 +126,15 @@
 					<input type="button" value="Volver" class="boton" onclick="javascript:returnInicio()"/>
 				</div>
 			</fieldset>
-		</div>
 		<?php
 		if(isset($_SESSION['finish']))
 			if($_SESSION['finish'] == true)
 				{
-					echo "Ya existe un usuario con ese mail";
+					echo "<p>Ya existe un usuario con ese mail</p>";
 					$_SESSION['finish'] = false;
 				}
 		?>
+		</div>
 		</form>
 	</body>
 </html>

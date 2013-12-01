@@ -47,7 +47,7 @@
 			<?php include ('conectados.php'); ?>
 			
 			<div id="divAsignarMusica" class="asignarMusica">
-				<table>
+				<table align="center">
 				<tr>
 					<td>
 						Ordenar por:
@@ -74,8 +74,8 @@
 						</select>
 					</td>
 				</tr>
-				</table>
-				<table border="1">
+				</table>	
+				<table border="1" align="center">
 					<tr>
 						<td>Nombre</td>
 						<td>Genero</td>

@@ -50,6 +50,11 @@
 	font-weight: bold; 
 	line-height: 200%;
 }
+.registro p{
+	font-size: 24px; 
+	color: red;
+	line-height: 50%;
+}
 .imgRegistro{
 	width:100%
 }
@@ -254,6 +259,45 @@
 	text-align: center;
 }
 /******************** Fin Buscar Amigos ********************/
+.ranking{
+	float:left;
+	width:60%;
+	height: 78%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: #ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	text-align: center;
+	overflow: auto;
+}
+.ranking table{
+	text-align: center;
+	color: white;
+	border: 1px;
+	border-style: solid; 
+	border-color: white;
+}
+.solicitudes{
+	float:left;
+	width:60%;
+	height: 78%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: #ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	text-align: center;
+	overflow: auto;
+}
+.solicitudes table{
+	text-align: center;
+	color: white;
+}
 .notificaciones{
 	float:left;
 	width:60%;
@@ -265,6 +309,11 @@
 	font-family: Old English Text MT; 
 	font-size: 16px; 
 	font-weight: bold; 
+	overflow: auto;
+}
+.notificaciones table{
+	align: center;
+	color: white;
 }
 .menuConectados{
 	float: right;
@@ -274,8 +323,25 @@
 	color: white;
 	border-style: solid; 
 	border-color: #ade8d2;
+	overflow: auto;
 }
-
+.asignarMusica{
+	float:left;
+	width:60%;
+	background:black;
+	color: white;
+	border-style: solid; 
+	border-color: #ade8d2;
+	font-family: Old English Text MT; 
+	font-size: 16px; 
+	font-weight: bold; 
+	text-align: center;
+}
+.asignarMusica td{
+	color: white;
+	text-align: center;
+	align: center;
+}
 
 body {
 	background: url(../images/fondo2.png);
