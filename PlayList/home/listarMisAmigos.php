@@ -21,7 +21,7 @@
 	
 	if($filas>=1)
 	{
-		echo "<table">;
+		echo "<table>";
 		while($resultado = mysql_fetch_array($query))
 		{ 
 			echo "<tr>";
