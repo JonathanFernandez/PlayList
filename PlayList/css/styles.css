@@ -159,7 +159,9 @@
 /******************** Crear Playlist y Musica ********************/
 
 .crear{
+	padding-top: 1%;
 	float:left;
+	height: 76%;
 	width:60%;
 	background:black;
 	color: white;
@@ -207,9 +209,10 @@
 
 /******************** Listado Playlist ********************/
 .listadoPlaylist{
+	padding-top: 1%;
 	float:left;
 	width:60%;
-	height: 78%;
+	height: 76%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -227,8 +230,10 @@
 
 /******************** Buscar Amigos y Mis Amigos ********************/
 .buscarAmigos{
+	padding-top: 1%;
 	float:left;
 	width:60%;
+	height: 76%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -269,9 +274,10 @@
 
 /******************** Eliminar ********************/
 .eliminar{
+	padding-top: 1%;
 	float:left;
 	width:60%;
-	height: 78%;
+	height: 76%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -291,9 +297,10 @@
 /******************** Fin Eliminar ********************/
 
 .ranking{
+	padding-top: 1%;
 	float:left;
 	width:60%;
-	height: 78%;
+	height: 76%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -312,9 +319,10 @@
 	border-color: white;
 }
 .solicitudes{
+	padding-top: 1%;
 	float:left;
 	width:60%;
-	height: 78%;
+	height: 76%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -330,9 +338,10 @@
 	color: white;
 }
 .notificaciones{
+	padding-top: 1%;
 	float:left;
 	width:60%;
-	height: 78%;
+	height: 76%;
 	background:black;
 	color: white;
 	border-style: solid; 
@@ -348,7 +357,8 @@
 }
 .menuConectados{
 	float: right;
-	width: 22%;
+	width: 21%;
+	padding-left:1%;
 	height: 78%;
 	background-color:black;
 	color: white;
@@ -357,6 +367,8 @@
 	overflow: auto;
 }
 .asignarMusica{
+	padding-top: 1%;
+	height: 76%;
 	float:left;
 	width:60%;
 	background:black;
@@ -369,13 +381,17 @@
 	text-align: center;
 	overflow: auto;
 }
-.asignarMusica td{
+.asignarMusica table{
 	color: white;
 	text-align: center;
 	align: center;
+	overflow: auto;
 }
 
 body {
 	background: url(../images/fondo2.png);
 	background-size: cover;
+}
+form {
+	margin: auto;
 }
