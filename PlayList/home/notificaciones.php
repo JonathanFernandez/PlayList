@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/menuStyles.css"/>
 	<script src="../jQuery/1.10.3jquery-ui.js"></script>
 	<script type="text/javascript">
-			var int=self.setInterval("refresh()",180000);
+			var int=self.setInterval("refresh()",600000);
 			function refresh()
 			{
 					location.reload(true);
